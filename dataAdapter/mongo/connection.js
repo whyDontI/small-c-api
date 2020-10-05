@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const envConfig = require('../../server').envConfig
 const log = console.log
 
-mongoose.connect(`mongodb://${envConfig.database.localDB.db_host}:27017/${envConfig.database.localDB.db_name}`, {
+mongoose.connect('process.env.MONGODB_URI', {
   useUnifiedTopology: true,
   useNewUrlParser: true
 })
