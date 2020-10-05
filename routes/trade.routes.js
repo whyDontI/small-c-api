@@ -42,8 +42,8 @@ app.patch('/:id', tradeValidator.updateTrade, async (req, res) => {
 
 app.delete('/:id', async (req, res) => {
   try {
-    const { deletedTrade, message, status } = await tradeService._deletedTrade(req.params.id)
-    return __.successMsg(req, res, status, deletedTrade, message)
+    const { message, status } = await tradeService._deletedTrade(req.params.id)
+    return __.successMsg(req, res, status, {}, message)
   } catch (error) {
     return __.errorMsg(req, res, 503, 'Service Unavaiable', error)
   }

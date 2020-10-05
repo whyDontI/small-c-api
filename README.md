@@ -3,6 +3,9 @@
 > Postman collection link  
 > https://www.getpostman.com/collections/69d1e92f89dc7eaf52b3
 
+> Heroku hosted API link  
+> https://smallcase-trades.herokuapp.com/api/v1/
+
 ## APIs
 
 - [Trade](#trade)
