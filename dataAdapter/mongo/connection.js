@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const envConfig = require('../../server').envConfig
 const log = console.log
 
-mongoose.connect('process.env.MONGODB_URI', {
+mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 })
