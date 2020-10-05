@@ -1,12 +1,10 @@
 const cluster = require('cluster')
-// const numCPUs = require('os').cpus().length
-const numCPUs = 1
+const numCPUs = require('os').cpus().length
 const chalk = require('chalk')
 const log = console.log
 class Cluster {
   constructor () {
     if (cluster.isMaster) {
-      //   require('./lib/cron/beatplan');
       log(chalk.blue.bgRed.bold(` [ ✓ ] Master ${process.pid} is running`))
 
       // Fork workers.
